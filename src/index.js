@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import {Provider} from 'react-redux';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Navigation from './components/navigation';
+import {store} from './redux/store';
+import Images from './components/images';
+import Videos from './components/videos';
 
-import App from './components/app';
-import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
-
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+ReactDOM.render(<Provider store={store}>
+              <BrowserRouter>
+              <Switch>
+                <Navigation>
+                <Route exact path="/images" component={Images} />
+                <Route path="/videos" component={Videos} />
+                </Navigation>
+              </Switch>
+              </BrowserRouter>
+              </Provider>, document.querySelector('.jombotrone'));
