@@ -1,2 +1,0 @@
-# gemindustrytech
-gemindustrytech
