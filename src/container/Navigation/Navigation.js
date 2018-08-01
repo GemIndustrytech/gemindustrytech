@@ -9,9 +9,9 @@ class Navigation extends Component {
         <nav className="navbar navbar-inverse">
           <div className="container-fluid">
             <div className="navbar-header">
-              <Link className="navbar-brand" to="/">WebSiteName</Link>
+              <Link className="navbar-brand" to="/">Gem Industry Tech</Link>
             </div>
-            <ul className="nav navbar-nav">
+            <ul className="nav navbar-nav gem-tech-nav">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/images">Images</Link></li>
               <li><Link to="/videos">Videos</Link></li>
