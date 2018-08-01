@@ -7,13 +7,15 @@ import Navigation from './container/Navigation/Navigation';
 import Home from './container/Home/Home';
 import registerServiceWorker from './registerServiceWorker';
 import {store} from './redux/store';
+import Images from './container/Images/images';
 
 ReactDOM.render(
             <Provider store={store}>
             <BrowserRouter>
                 <Navigation>
                     <Switch>
-                        <Route expe path="/" component={Home} />
+                        <Route exact path="/" component={Home} />
+                        <Route path="/images" component={Images} />
                     </Switch>
                 </Navigation>
                 </BrowserRouter>
